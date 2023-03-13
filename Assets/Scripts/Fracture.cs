@@ -1,20 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+
 
 public class Fracture : MonoBehaviour
 {
     [Tooltip("\"Fractured\" is the object that this will break into")]
     public GameObject fractured;
     [SerializeField] AudioClip _audio;
-    [SerializeField] TextMeshProUGUI text;
-    [SerializeField] int Points, TotalPoints = 3;
+    
 
-    private void Start()
-    {
-        text.text = (Points + "/" + TotalPoints);
-    }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("bullet"))
@@ -32,9 +28,8 @@ public class Fracture : MonoBehaviour
 
     void HIT()
     {
-        
-        Points++;
-        text.text = (Points + "/" + TotalPoints);
+
+        Points.instance.Hitted();
         FractureObject();
     }
     public void FractureObject()

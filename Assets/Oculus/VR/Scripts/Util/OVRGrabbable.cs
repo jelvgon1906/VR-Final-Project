@@ -126,18 +126,13 @@ public class OVRGrabbable : MonoBehaviour
         if (gameObject.GetComponent<Items>() == null) return;
         if (gameObject.GetComponent<Items>().inSlot)
         {
-            gameObject.GetComponentInParent<Slot>().ItemInSlot = null;
+            gameObject.GetComponentInParent<Slot>().itemInSlot = null;
             gameObject.transform.parent = null;
             gameObject.GetComponent<Items>().inSlot = false;
             gameObject.GetComponent<Items>().currentSlot.ResetColor();
             gameObject.GetComponent<Items>().currentSlot = null;
 
         }
-        /*if (GetComponent<SpecificPosition>() != null)
-        {
-            transform.position = hand.gameObject.transform.position;
-            transform.rotation = hand.gameObject.transform.rotation;
-        }*/
     }
 
 	/// <summary>
@@ -151,6 +146,18 @@ public class OVRGrabbable : MonoBehaviour
         rb.angularVelocity = angularVelocity;
         m_grabbedBy = null;
         m_grabbedCollider = null;
+
+        // Added for inventory *********
+        if (gameObject.GetComponent<Items>() == null) return;
+        if (gameObject.GetComponent<Items>().inSlot)
+        {
+            gameObject.GetComponentInParent<Slot>().itemInSlot = null;
+            gameObject.transform.parent = null;
+            gameObject.GetComponent<Items>().inSlot = false;
+            gameObject.GetComponent<Items>().currentSlot.ResetColor();
+            gameObject.GetComponent<Items>().currentSlot = null;
+
+        }
     }
 
     void Awake()

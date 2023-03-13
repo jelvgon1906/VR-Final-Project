@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.GraphicsBuffer;
-
 public class Enemy : MonoBehaviour
 {
     public GameObject stone;
@@ -29,7 +27,7 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("weapon"))
+        if (collision.gameObject.CompareTag("bullet")  || collision.gameObject.CompareTag("weapon"))
         {
             health--;
             sliderHealth.value = health;
