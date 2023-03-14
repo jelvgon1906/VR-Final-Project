@@ -27,7 +27,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162601333017623054}
   m_LocalRotation: {x: -0.7071068, y: -0.7071067, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 20.26}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 154.50002, y: 315.86096}
-  m_SizeDelta: {x: 640, y: 311}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1162601333017623058
 Canvas:
@@ -137,7 +137,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0.3, y: 0.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1162601333672961987
 CanvasRenderer:
@@ -202,7 +202,7 @@ Transform:
   m_GameObject: {fileID: 1162601334066404233}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.596, y: 0.948, z: -14.578}
-  m_LocalScale: {x: 0.0007, y: 0.0007, z: 0.0007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1162601334098001132}
@@ -235,15 +235,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162601334098001133}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -308, y: -633, z: -37}
-  m_LocalScale: {x: 2.58, y: 2.58, z: 1.29}
-  m_ConstrainProportionsScale: 1
+  m_LocalRotation: {x: -0.025609672, y: 0.18889597, z: 0.6121743, w: 0.76740164}
+  m_LocalPosition: {x: 0.4359977, y: -0.31600562, z: 0.1279949}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1162601333017623053}
   m_Father: {fileID: 1162601334066404232}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -15.699, y: 15.58, z: 75}
 --- !u!65 &1162601334098001138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -255,8 +255,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 99.81981, y: 99.50893, z: 87.56032}
-  m_Center: {x: 155.23727, y: 315.31503, z: 11.352592}
+  m_Size: {x: 0.3, y: 0.3, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1162601334098001139
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -272,7 +272,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 3
 --- !u!114 &1162601334098001137
 MonoBehaviour:
   m_ObjectHideFlags: 0

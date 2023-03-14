@@ -9440,6 +9440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1471820525369205860}
   - component: {fileID: -7549912448291465780}
+  - component: {fileID: 7908865806448732278}
   m_Layer: 0
   m_Name: RockFracture9
   m_TagString: Untagged
@@ -9582,6 +9583,22 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints:
   - {fileID: 0}
+--- !u!54 &7908865806448732278
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7139729654043156525}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &7200714078561993666
 GameObject:
   m_ObjectHideFlags: 0

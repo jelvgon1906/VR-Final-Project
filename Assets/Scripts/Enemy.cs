@@ -13,8 +13,8 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     private Vector3 targetPosition;
     GameObject player;
-    
 
+    bool dead;
     //hud
     int health = 10;
     public Slider sliderHealth;
@@ -33,9 +33,13 @@ public class Enemy : MonoBehaviour
             sliderHealth.value = health;
             if(health <= 0)
             {
+                StopCoroutine("Attack");
+                dead = true;
+                StopCoroutine("Attack");
                 GetComponent<Rigidbody>().isKinematic = true;
                 GetComponent<SphereCollider>().enabled = false;
                 GetComponent<CapsuleCollider>().enabled = false;
+
                 animator.Play("Death");
 
                 this.enabled = false;
@@ -44,7 +48,7 @@ public class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("player"))
+        if (other.gameObject.CompareTag("player") && !dead)
         {
             StartCoroutine("Attack");
         }
